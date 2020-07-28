@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "194995901532",
+    "firebase_url": "https://project-sunny-354cb.firebaseio.com",
+    "project_id": "project-sunny-354cb",
+    "storage_bucket": "project-sunny-354cb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:194995901532:android:d946e446335ea07e174299",
+        "android_client_info": {
+          "package_name": "jp.ac.asojuku.sunny01"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "194995901532-e3rj8mb917ufdnert0cv33naf5a8ftom.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "jp.ac.asojuku.sunny01",
+            "certificate_hash": "195f858f5705f9ae00823e874bd2858e5bcaaad4"
+          }
+        },
+        {
+          "client_id": "194995901532-fb9v9525b8khtjjkjg3g7kt4t4jc7tn2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIw9pWVTH32NZV9bVucIKwd9ZoYoqKhE4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "194995901532-fb9v9525b8khtjjkjg3g7kt4t4jc7tn2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
