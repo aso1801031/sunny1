@@ -7,10 +7,9 @@ import android.util.Log
 import android.view.View
 import android.view.Window
 import android.view.WindowManager
-import com.google.android.gms.auth.api.signin.GoogleSignIn
-import com.google.android.gms.auth.api.signin.GoogleSignInAccount
-import com.google.android.gms.auth.api.signin.GoogleSignInClient
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import android.widget.TextView
+import com.google.android.gms.auth.api.Auth
+import com.google.android.gms.auth.api.signin.*
 import com.google.android.gms.common.api.ApiException
 import com.google.android.gms.tasks.Task
 import kotlinx.android.synthetic.main.activity_main.*
@@ -54,7 +53,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         if (requestCode == RC_SIGN_IN) {
             val task =
                 GoogleSignIn.getSignedInAccountFromIntent(data)
+            //val result = Auth.GoogleSignInApi.getSignInResultFromIntent(data)
             handleSignInResult(task)
+
         }
     }
 
@@ -63,14 +64,24 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             val account =
                 completedTask.getResult(ApiException::class.java)
             updateUI(account)
+            val textView = findViewById(R.id.user) as TextView
+            textView.setText(account?.displayName.toString())
+
+
         } catch (e: ApiException) {
             Log.w(
                 TAG,
                 "signInResult:failed code=" + e.statusCode
             )
             updateUI(null)
+            val textView = findViewById(R.id.user) as TextView
+            textView.setText(e.toString())
+
+
         }
     }
+
+
 
     private fun signIn() {
         val signInIntent = mGoogleSignInClient!!.signInIntent
